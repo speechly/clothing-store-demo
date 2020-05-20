@@ -3,8 +3,8 @@ import {Client} from "@speechly/browser-client";
 
 function initialize() {
     let client = new Client({
-        appId: '0628a893-5f79-418b-bee9-e2b62064bd6c',
-        language: 'en-US'
+        appId: process.env.SPEECHLY_APP_ID,
+        language: process.env.SPEECHLY_LANGUAGE
     })
 
     client.initialize((err?: Error) => {
