@@ -33,54 +33,24 @@ If you use the code as it is and the default SAL configuration [speechly_config.
 - filter the medium sizes
 - filter the orange colour
 
-## Prerequisites
+## Development
+### Prerequisites
 
 * [node + npm](https://nodejs.org/) (Current Version)
 
-## Option
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-
-## Project Structure
-
-* src/typescript: TypeScript source files
-* src/assets: static files
-* dist: Chrome Extension directory
-* dist/js: Generated JavaScript files
-
-## Setup
-
+Install dependencies.
 ```
 npm install
 ```
-
-## Import as Visual Studio Code project
-
-...
-
-## Build
+Build the extension to `dist` directory
 
 ```
 npm run build
 ```
-
-## Build in watch mode
-
-### terminal
-
+Build in watch mode
 ```
 npm run watch
 ```
+Test `npm run test`
 
-### Visual Studio Code
 
-Run watch mode.
-
-type `Ctrl + Shift + B`
-
-## Load extension to chrome
-
-Load `dist` directory
-
-## Test
-`npx jest` or `npm run test`
