@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css"></link>
+    <script src="js/vendor.js"></script>
+  </head>
+  <body>
+    <!--<ul style="min-width: 700px;">
+    <li>Connected: <span id="connection-status"></span></li>
+    <li>Entities: <span id="first-entity"></span>; <span id="second-entity"></span></li>
+    </ul> 
+    <button id="connectButton">Connect</button> -->
+    <div class="Microphone" id="microphone" >
+      <div id="microphone_button" class="Microphone__button Microphone__button__inactive">
+        <object>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" tabIndex={0} viewBox="-2 -2 24 24">
+            <circle stroke="#d8dfe6" strokeWidth="0.5" cx="10" cy="10" r="15" fill="#ffffff" />
+            <path d="M10 10" />
+            <path
+              transform="translate(2,2) scale(0.8)"
+              x="10"
+              y="10"
+              d="M9 18v-1.06A8 8 0 0 1 2 9h2a6 6 0 1 0 12 0h2a8 8 0 0 1-7 7.94V18h3v2H6v-2h3zM6 4a4 4 0 1 1 8 0v5a4 4 0 1 1-8 0V4z"
+            />
+          </svg>
+        </object>
+      </div>
+    </div>
+    <div id="transcript"></div>
+    <script src="js/popup.js"></script>
+  </body>
+</html>
+

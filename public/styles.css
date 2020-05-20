@@ -1,0 +1,88 @@
+.Microphone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3vh !important;
+  min-width: 175px;
+  min-height: 175px;
+}
+.Microphone__loading {
+  position: absolute;
+}
+.Microphone__start {
+  border-radius: 1.5rem !important;
+  padding: 1rem !important;
+}
+.Microphone__button {
+  display: inline-flex;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin: auto;
+  transform-origin: bottom center;
+  width: 50%;
+}
+.Microphone__button svg {
+  width: 100%;
+  outline: none;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+  transform-origin: bottom center;
+  overflow: visible;
+  max-height: 30vh;
+  fill: #302666;
+}
+.Microphone__button object {
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  vertical-align: middle;
+  display: table-cell;
+  width: 100%;
+  max-height: 10vh;
+}
+@media only screen and (min-width: 768px) {
+  .Microphone__button {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .Microphone__button {
+    width: 40%;
+  }
+}
+.Microphone__button:hover svg {
+  transform: scale(1.1);
+}
+.Microphone__button__loading {
+  padding: 2vh 3vh !important;
+}
+.Microphone__button__active svg {
+  transform-origin: bottom center;
+  fill: red;
+  transform: scale(1.8) !important;
+}
+.Microphone__button__inactive {
+  transform: none;
+  opacity: 0.3;
+}
+.Microphone__button__inactive svg {
+  transition: none;
+}
+.Microphone__help {
+  display: inline-flex;
+  margin: 1vh;
+  text-align: center;
+  transition: all 0.5s;
+  /* smartphones, touchscreens */
+}
+@media (hover: none) and (pointer: coarse) {
+  .Microphone__help {
+    display: none;
+  }
+}
+.Microphone__help--hidden {
+  opacity: 0;
+}

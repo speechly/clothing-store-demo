@@ -1,0 +1,16 @@
+brands = [calvin klein|adidas|vans|boss|asos|american eagle|abercrombie and fitch|aj morgan|albam utility|allsaints|alpha-h|ameliorate|anatomicals|anon|another influence|armani exchange|asics|avail london|barbour|barbour beacon|barbour international|berghaus|bershka|billabong|blood brother|boohooman|brave soul|burton menswear|carhartt wip|carhartt|carrots|celio|champion|chinatown market|collusion|columbia|converse|crooked tongues|dickies|emporio armani|element|ellesse|esprit|farah|fila|fiorucci|fred perry|good for nothing|g-star|helly hansen|hollister|huf|hugo|jack and jones|jordan|karl kani|lacoste|levi's|levis|liquor n poker|lyle and scott|mennace|napapijri|new balance|new era|new look|nicce|nike|obey|one above another|only and sons|original penguin|polo ralph lauren|ps paul smith|pull and bear|puma|reclaimed vintage|reebok|religion|river island|santa cruz|selected homme|sex skateboards|siksilk|sixth june|ted baker|the couture club|the north face|tommy hilfiger|tommy jeans|tom tailor|topman|under armour|weekday]
+colours = [red|green|pink|blue|beige|yellow|white|black|navy|grey|multi|brown|stone|silver|purple|gold|tan|orange|cream|mat]
+sizes = [medium|small|large]
+sorting = [cheapest|most expensive]
+connection_words = [of|from]
+
+*filter_product filter the products $connection_words $brands(brand)
+*filter_size filter the $sizes(size) sizes
+*filter_colour filter the $colours(base_colour) colour cloths
+
+*filter_product filter the products $connection_words $brands(brand) and *filter_size filter the $sizes(size) sizes
+*filter_size filter the $sizes(size) sizes and *filter_product filter the products $connection_words $brands(brand)
+*filter_colour filter the $colours(base_colour) colour cloths and *filter_product filter the products $connection_words $brands(brand)
+*filter_product filter the products $connection_words $brands(brand) and *filter_colour filter the $colours(base_colour) colour cloths
+
+*remove_filters clear all

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Speechly clothing shop demo",
+  "description": "Voice interface chrome extension using Speechly.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+      {
+          "matches": ["https://www.asos.com/"],
+          "js": ["js/vendor.js", "js/content_script.js"]
+      }
+  ],
+
+  "background": {
+    "scripts": ["js/vendor.js", "js/background.js"]
+  },
+
+  "permissions": [
+    "tabs"
+  ]
+}
