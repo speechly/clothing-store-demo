@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Please give access to microphone</title>
+  <title>Welcome to Speechly clothing store demo</title>
+  <link rel="stylesheet" href="styles.css"></link>
   <script src="js/vendor.js"></script>
 </head>
 
 <body>
-  <p>This page asks you to give access to microphone.</p>
+  <div class="welcome-page">
+    <div>
+      <h2>Welcome to Speechly clothing store demo</h2>
 
+      <p>You can use this extension to filter products at <a href="https://asos.com">ASOS</a> webstore. </p>
+      <p>But before starting, please provide the app id of your Speechly app.</p>
+      <p>Don't have Speechly app id? Please check Speechly <a href="https://www.speechly.com/docs/quick-start">quick start</a> to find out more</p>
+
+      <label for="app-id-input">Speechly APP ID:</label>
+
+      <input type="text" id="app-id-input" name="app-id" required minlength="36" maxlength="36" size="42">
+      <div id="status"></div>
+      <button id="save">Save</button>
+    </div>
+  </div>
   <script type="text/javascript"  src="js/microphone_access.js"></script>
 </body>
 </html>

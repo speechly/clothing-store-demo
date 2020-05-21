@@ -86,3 +86,13 @@
 .Microphone__help--hidden {
   opacity: 0;
 }
+
+.welcome-page {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.welcome-page div {
+  white-space: pre-line;
+}

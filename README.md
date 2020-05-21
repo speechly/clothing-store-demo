@@ -13,15 +13,14 @@ You can easily set it up locally to your Chrome browser.
 
 ## Add the extension to your browser
 
-1. Clone the repository locally
-2. Create an app at [speechly.com](https://www.speechly.com/). You can take [speechly_config.sal](speechly_config.sal) as starting point for your configuration.
-3. Run `mv .env.local .env`
-4. Fill your appid and language to `.env`. You can find these from the app you created in step 2.
-5. Run `npm run build` to build the Chrome extension. Now `dist/` should contain the extension.
-6. Navigate to `chrome://extensions` in your chrome. Expand the Developer dropdown menu and click "Load Unpacked Extension"
-7. Choose the `dist` directory and click Ok
-8. The extension asks you now to allow using microphone. This happens only once and after the microphone is available when you use the extension.
-9. Navigate to asos.com product search and start filtering with your voice!
+1. Create an app following the [quick-start](https://www.speechly.com/docs/quick-start/). You can take [speechly_config.sal](speechly_config.sal) as starting point for your configuration.
+2. Note the app id of your new Speechly app.
+3. Clone the repository locally
+4. Run `npm run build` to build the Chrome extension. Now `dist/` should contain the extension.
+5. Navigate to `chrome://extensions` in your chrome browser. Expand the Developer dropdown menu and click "Load Unpacked Extension"
+6. Choose the `dist` directory and click Ok
+7. The extension asks you now you app id. Use the one created in step 1. The browser might ask you to give the extenstion access to your microphone.
+8. Navigate to asos.com product search and start filtering with your voice!
 
 ## How to use it?
 

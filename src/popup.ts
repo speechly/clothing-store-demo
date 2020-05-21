@@ -1,4 +1,3 @@
-import * as moment from 'moment';
 import * as $ from 'jquery';
   
 import {
@@ -14,9 +13,22 @@ let state = {
 }
 
 $(function() {
+  chrome.storage.sync.get({
+    speechly_app_id: '',
+  }, function(items: {speechly_app_id}) {
+    const appId = items.speechly_app_id;
+    if (appId.length !== 36) {
+      console.error("AppId " + items.speechly_app_id + " should be 36 character long but was " + appId.length)
+      return
+    }
+    configureApp(appId)
+  });
+});
+
+function configureApp(appId: string) {
   let client = new Client({
-    appId: process.env.SPEECHLY_APP_ID,
-    language: process.env.SPEECHLY_LANGUAGE
+    appId: appId,
+    language: "en-US"
   })
 
   $('#microphone').click(()=>{
@@ -55,7 +67,7 @@ $(function() {
     client.stopContext()
     $('#microphone_button').removeClass("Microphone__button__active");
   })
-});
+}
 
 function updateWords(words: Word[]) {
   const transcriptDiv = document.getElementById(

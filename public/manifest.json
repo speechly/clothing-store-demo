@@ -5,6 +5,11 @@
   "description": "Voice interface chrome extension using Speechly.",
   "version": "1.0",
 
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
@@ -22,6 +27,7 @@
   },
 
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ]
 }
