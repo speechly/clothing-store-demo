@@ -24,7 +24,7 @@ You can easily set it up locally to your Chrome browser.
 
 ## How to use it?
 
-The extension icon will on the right side of URL search bar of your Chrome browser. Click the Speechly icon to open a small popup with the microphone.
+The extension icon is on the right side of URL bar of your browser. Click the Speechly icon to open a small popup with the microphone.
 Speak aload your command while pressing the mic. You can see the transcript of your speach below the mic.
 
 If you use the code as it is and the default SAL configuration [speechly_config.sal](speechly_config.sal), you can test it by saying for example
