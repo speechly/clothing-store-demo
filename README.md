@@ -15,7 +15,7 @@ You can easily set it up locally to your Chrome browser.
 
 Start by creating an Speechly app, following the [quick-start](https://www.speechly.com/docs/quick-start/). You can take [speechly_config.sal](speechly_config.sal) as starting point for your configuration. Note the app id of your new Speechly app.
 
-Install the extension either from [Chrome Web Store](https://chrome.google.com/webstore/detail/cdlhelepiigikijnjmkonhhpdcmojlaa) or cloning this repository and following [these steps](https://github.com/speechly/clothing-store-demo#add-the-extension-to-your-browser). When you install the extension, you are asked to provide Speechly app id.
+Install the extension either from [Chrome Web Store](https://chrome.google.com/webstore/detail/cdlhelepiigikijnjmkonhhpdcmojlaa) or cloning this repository and following [these steps](https://github.com/speechly/clothing-store-demo#install-the-local-version-to-your-browser). When you install the extension, you are asked to provide Speechly app id.
 
 After installation you can find the Speechly icon next to URL bar:
 ![Speechly extension icon](extension_icon.png)
@@ -47,7 +47,7 @@ npm run watch
 ```
 Test `npm run test`
 
-### Install the local version to browser
+### Install the local version to your browser
 
 1. Clone the repository locally
 2. Run `npm run build` to build the Chrome extension. Now `dist/` should contain the extension.
