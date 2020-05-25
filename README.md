@@ -18,8 +18,10 @@ Start by creating an Speechly app, following the [quick-start](https://www.speec
 Install the extension either from [Chrome Web Store](https://chrome.google.com/webstore/detail/cdlhelepiigikijnjmkonhhpdcmojlaa) or cloning this repository and following [these steps](https://github.com/speechly/clothing-store-demo#install-the-local-version-to-your-browser). When you install the extension, you are asked to provide Speechly app id.
 
 After installation you can find the Speechly icon next to URL bar:
-![Speechly extension icon](extension_icon.png)
-Navigate to [ASOS](https://www.asos.com) and click the Speechly icon to open a small popup with the microphone.
+
+<img src="extension_icon.png" alt="Speechly extension icon" width="300"/>
+
+Go to [ASOS](https://www.asos.com) and navigate 'Men' or 'Women' -> 'New in' -> 'View all'. Click the Speechly icon to open a small popup with the microphone.
 Speak aload your command while pressing the mic. You can see the transcript of your speech below the mic.
 
 If you use the code as it is and the default SAL configuration [speechly_config.sal](speechly_config.sal), you can test it by saying for example
