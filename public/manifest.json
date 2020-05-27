@@ -3,12 +3,7 @@
 
   "name": "Speechly clothing shop demo",
   "description": "Voice interface chrome extension using Speechly.",
-  "version": "1.0.1",
-
-  "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
-  },
+  "version": "1.0.3",
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -27,7 +22,6 @@
   },
 
   "permissions": [
-    "tabs",
-    "storage"
+    "tabs"
   ]
 }

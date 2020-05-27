@@ -1,3 +1,4 @@
+const Dotenv = require('dotenv-webpack');
 const webpack = require("webpack");
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -6,7 +7,6 @@ const srcDir = '../src/';
 module.exports = {
     entry: {
         popup: path.join(__dirname, srcDir + 'popup.ts'),
-        options: path.join(__dirname, srcDir + 'options.ts'),
         background: path.join(__dirname, srcDir + 'background.ts'),
         content_script: path.join(__dirname, srcDir + 'content_script.ts'),
         microphone_access: path.join(__dirname, srcDir + 'microphone_access.ts')
@@ -40,6 +40,9 @@ module.exports = {
             { from: '.', to: '../' }
           ],
           {context: 'public' }
-        )
+        ),
+        new Dotenv({
+            path: './.env' // load this now instead of the ones in '.env'
+        })
     ]
 };

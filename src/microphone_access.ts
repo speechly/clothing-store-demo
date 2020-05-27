@@ -9,35 +9,21 @@ function initialize(appId: string, statusBar: JQuery<HTMLElement>) {
 
     client.initialize((err?: Error) => {
         if (err !== undefined) {
-            const msg = 'Failed to initialize Speechly client:' + err
+            let msg = 'Failed to initialize Speechly client.' + err
             console.error(msg)
+            msg += '\n\n Do you have the most recent version of the extension installed?'
             statusBar.text(msg)
         } else {
-            const msg = 'Speechly initialization worked. \n You can now close this tab and \n start using the extension.'
+            let msg = 'Speechly initialized. \n You can now close this tab and \n start using the extension.\n\n'
+            msg += "Go to ASOS website and \n navigate to 'Men' or 'Women' -> 'New in' -> 'View all'."
             console.log(msg)
             statusBar.text(msg)
         }
     })
 }
 
-// Saves options to chrome.storage.sync.
-function save_options() {
-    const appId: string = $('#app-id-input').val() as string;
-    chrome.storage.sync.set({
-      speechly_app_id: appId.trim(),
-    }, function() {
-      // Update status to let user know options were saved.
-      var status = $('#status');
-      status.text('App ID saved.');
-      setTimeout(function() {
-        status.text('You might be asked to give access to microphone.');
-        setTimeout(function() {
-            initialize(appId, status);
-          }, 1000);
-      }, 750);
-    });
-  }
-
-$(document).ready(function(){
-    $('#save').click(save_options);
+$(document).ready(() => {
+  const status = $('#status');
+  const appId = process.env.SPEECHLY_APP_ID;
+  initialize(appId, status);
 });

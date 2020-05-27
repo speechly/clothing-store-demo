@@ -13,16 +13,7 @@ let state = {
 }
 
 $(function() {
-  chrome.storage.sync.get({
-    speechly_app_id: '',
-  }, function(items: {speechly_app_id}) {
-    const appId = items.speechly_app_id;
-    if (appId.length !== 36) {
-      console.error("AppId " + items.speechly_app_id + " should be 36 character long but was " + appId.length)
-      return
-    }
-    configureApp(appId)
-  });
+  configureApp(process.env.SPEECHLY_APP_ID)
 });
 
 function configureApp(appId: string) {
@@ -30,6 +21,12 @@ function configureApp(appId: string) {
     appId: appId,
     language: "en-US"
   })
+
+  client.onStateChange((state: ClientState) => {
+    if (state === ClientState.Failed) {
+      $('#error_message').text('Please ensure that your extension is updated to the latest version.');
+    }
+  });
 
   $('#microphone').click(()=>{
     if (clientState === ClientState.Disconnected) {
