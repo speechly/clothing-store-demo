@@ -1,6 +1,8 @@
+# <a href="https://www.speechly.com/"><img src="https://www.speechly.com/images/logo.png" height="100" alt="Speechly"></a>
+
 # Speechly shopping demo
 
-This is a simple Chrome extension that shows how Speechly enables easily filtering products by voice. 
+This is a simple Chrome extension that shows how [Speechly](https://www.speechly.com/) enables easily filtering products by voice. 
 Speechly configuration for the app can be found in [speechly_config.sal](speechly_config.sal).
 
 Built with:
@@ -10,6 +12,10 @@ Built with:
 - [TypeScript](https://www.typescriptlang.org)
 
 You can easily set it up locally to your Chrome browser.
+
+### NOTE for React users
+
+You can refer to our [React client example](https://github.com/speechly/react-example-repo-filtering/) to build something like this on React.
 
 ## How to use it?
 
