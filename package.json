@@ -20,7 +20,7 @@
     "@types/node": "^13.13.5",
     "dotenv-webpack": "^1.7.0",
     "jquery": "^3.5.0",
-    "moment": "~2.24.0",
+    "moment": "~2.29.4",
     "nan": "^2.14.1"
   },
   "devDependencies": {
